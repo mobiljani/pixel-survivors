@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 95800457}
   - component: {fileID: 95800456}
   - component: {fileID: 95800455}
+  - component: {fileID: 95800458}
+  - component: {fileID: 95800459}
   m_Layer: 0
   m_Name: Noctowl
   m_TagString: Untagged
@@ -223,12 +225,52 @@ Transform:
   m_GameObject: {fileID: 95800454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.87, y: 2.48, z: 0}
+  m_LocalPosition: {x: 3.96, y: 1.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95800458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95800454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c1fe4dab57d456f8df204cdf7515a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 95800456}
+--- !u!50 &95800459
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95800454}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &457645482
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +282,8 @@ GameObject:
   - component: {fileID: 457645485}
   - component: {fileID: 457645484}
   - component: {fileID: 457645483}
+  - component: {fileID: 457645486}
+  - component: {fileID: 457645487}
   m_Layer: 0
   m_Name: Lugia
   m_TagString: Untagged
@@ -333,12 +377,52 @@ Transform:
   m_GameObject: {fileID: 457645482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.452396, y: 2.8025558, z: 0}
+  m_LocalPosition: {x: -4.38, y: 1.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &457645486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457645482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaa39240800b4214a4d493adda96219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 457645484}
+--- !u!50 &457645487
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457645482}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -15680,10 +15764,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8b23817aabf4493927eac38c8aed1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMoveDirection: {x: 0, y: 0, z: 0}
   rb: {fileID: 1764222718}
   animator: {fileID: 1764222717}
   speed: 2
-  playerMoveDirection: {x: 0, y: 0, z: 0}
 --- !u!70 &1764222720
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
