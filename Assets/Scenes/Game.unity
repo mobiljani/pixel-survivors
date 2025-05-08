@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 95800455}
   - component: {fileID: 95800458}
   - component: {fileID: 95800459}
+  - component: {fileID: 95800460}
   m_Layer: 0
   m_Name: Noctowl
   m_TagString: Untagged
@@ -225,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 95800454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.96, y: 1.47, z: 0}
+  m_LocalPosition: {x: -0.83, y: 3.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -244,6 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 95800456}
+  rb: {fileID: 95800459}
+  speed: 2
 --- !u!50 &95800459
 Rigidbody2D:
   serializedVersion: 5
@@ -270,7 +273,44 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &95800460
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95800454}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.000000040364398, y: 0.66139907}
+  m_Size: {x: 2.0937502, y: 1.3228039}
+  m_Direction: 1
 --- !u!1 &457645482
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +324,7 @@ GameObject:
   - component: {fileID: 457645483}
   - component: {fileID: 457645486}
   - component: {fileID: 457645487}
+  - component: {fileID: 457645488}
   m_Layer: 0
   m_Name: Lugia
   m_TagString: Untagged
@@ -396,6 +437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 457645484}
+  rb: {fileID: 457645487}
+  speed: 2
 --- !u!50 &457645487
 Rigidbody2D:
   serializedVersion: 5
@@ -422,7 +465,44 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &457645488
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457645482}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.07101168, y: 0.94404304}
+  m_Size: {x: 2.7032034, y: 1.8714051}
+  m_Direction: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -15767,7 +15847,7 @@ MonoBehaviour:
   playerMoveDirection: {x: 0, y: 0, z: 0}
   rb: {fileID: 1764222718}
   animator: {fileID: 1764222717}
-  speed: 2
+  speed: 4
 --- !u!70 &1764222720
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
