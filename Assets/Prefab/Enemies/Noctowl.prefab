@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1216237633128892639}
   rb: {fileID: 8726164211077262134}
+  destroyEffect: {fileID: 7401438508751414533, guid: 1ece110593ee54e19bec9a3d57ae9bb2, type: 3}
   speed: 2
 --- !u!50 &8726164211077262134
 Rigidbody2D:
