@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private float speed;
+    [SerializeField] private float health;
+    [SerializeField] private float maxHealth;
 
     void Awake()
     {
@@ -46,5 +48,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(playerMoveDirection.x * speed, playerMoveDirection.y * speed);
+    }
+
+    public void TakeDamage(float damage = 1f)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

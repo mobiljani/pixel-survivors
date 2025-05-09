@@ -30,6 +30,7 @@ public class EnemiesController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            PlayerController.Instance.TakeDamage(1);
             Instantiate(destroyEffect, transform.position, transform.rotation);
         }
     }
