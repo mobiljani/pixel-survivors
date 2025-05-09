@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject destroyEffect;
     [SerializeField] private float speed;
-    [SerializeField] private float health;
-    [SerializeField] private float maxHealth;
+    [SerializeField] public float health;
+    [SerializeField] public float maxHealth;
 
     void Awake()
     {
@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
             Instance = this;
         }
     }
+
+
 
     void Update()
     {
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage = 1f)
     {
         health -= damage;
+        UiController.Instance.UpdateHealthSlider();
 
         if (health <= 0)
         {
