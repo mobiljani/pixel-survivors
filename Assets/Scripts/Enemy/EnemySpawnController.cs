@@ -23,24 +23,27 @@ public class EnemySpawnController : MonoBehaviour
 
     void Update()
     {
-        var w = waves[waveIndex];
-        w.spawnTimer += Time.deltaTime;
-        if (w.spawnTimer >= w.spawnInterval)
+        if (PlayerController.Instance.gameObject.activeSelf)
         {
-            SpawnEnemy();
-            w.currentCount++;
-            w.spawnTimer = 0;
-        }
+            var w = waves[waveIndex];
+            w.spawnTimer += Time.deltaTime;
+            if (w.spawnTimer >= w.spawnInterval)
+            {
+                SpawnEnemy();
+                w.currentCount++;
+                w.spawnTimer = 0;
+            }
 
-        if (w.currentCount == w.noOfEnemyToSpawn)
-        {
-            waveIndex++;
-            w.currentCount = 0;
-        }
+            if (w.currentCount == w.noOfEnemyToSpawn)
+            {
+                waveIndex++;
+                w.currentCount = 0;
+            }
 
-        if (waves.Count == waveIndex)
-        {
-            waveIndex = 0;
+            if (waves.Count == waveIndex)
+            {
+                waveIndex = 0;
+            }
         }
     }
 

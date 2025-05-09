@@ -12,17 +12,24 @@ public class EnemiesController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (PlayerController.Instance.transform.position.x < transform.position.x)
+        if (PlayerController.Instance.gameObject.activeSelf)
         {
-            spriteRenderer.flipX = false;
+            if (PlayerController.Instance.transform.position.x < transform.position.x)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                spriteRenderer.flipX = true;
+            }
+
+            direction = (PlayerController.Instance.transform.position - transform.position).normalized;
+            rb.linearVelocity = new Vector2(direction.x * speed, direction.y * speed);
         }
         else
         {
-            spriteRenderer.flipX = true;
+            rb.linearVelocity = Vector2.zero;
         }
-
-        direction = (PlayerController.Instance.transform.position - transform.position).normalized;
-        rb.linearVelocity = new Vector2(direction.x * speed, direction.y * speed);
     }
 
     void OnCollisionStay2D(Collision2D collision)

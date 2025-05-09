@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             Instantiate(destroyEffect, transform.position, transform.rotation);
         }
     }
