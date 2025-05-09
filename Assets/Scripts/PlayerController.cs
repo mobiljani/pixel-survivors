@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject destroyEffect;
     [SerializeField] private float speed;
     [SerializeField] private float health;
     [SerializeField] private float maxHealth;
@@ -23,8 +24,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         var inputX = Input.GetAxisRaw("Horizontal");
@@ -57,6 +56,7 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            Instantiate(destroyEffect, transform.position, transform.rotation);
         }
     }
 }
